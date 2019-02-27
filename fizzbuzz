@@ -1,0 +1,41 @@
+#include "pch.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
+char* fizzbuzz(int);
+
+int main()
+{
+	for (int i = 1; i <= 100; i++)
+	{
+		cout << fizzbuzz(i) << endl;
+	}
+	return 0;
+}
+
+char* fizzbuzz(int i)
+{
+	char* NumberPart = new char[10];
+		sprintf_s(NumberPart, 9, "%i", i);
+	char* FizzPart = new char[10];
+		FizzPart[0] = '\0';
+	char* BuzzPart = new char[10];
+		BuzzPart[0] = '\0';
+	char* value = new char[10];
+
+		if (i % 3 == 0)
+		{
+			strcpy_s(NumberPart, 9, "");
+			strcpy_s(FizzPart, 9, "fizz");
+
+		}
+		if (i % 5 == 0)
+		{
+			strcpy_s(NumberPart, 9, "");
+			strcpy_s(FizzPart, 9, "buzz");
+		}
+
+		sprintf_s(value, 9, "%s%s%s", NumberPart, FizzPart, BuzzPart);
+		return value;
+}
