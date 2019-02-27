@@ -33,7 +33,7 @@ char* fizzbuzz(int i)
 		if (i % 5 == 0)
 		{
 			strcpy_s(NumberPart, 9, "");
-			strcpy_s(FizzPart, 9, "buzz");
+			strcpy_s(BuzzPart, 9, "buzz");
 		}
 
 		sprintf_s(value, 9, "%s%s%s", NumberPart, FizzPart, BuzzPart);
